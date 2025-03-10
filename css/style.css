@@ -125,6 +125,8 @@ nav > ul > li > a { padding: 10px 20px 15px 20px; width: auto; }
 
 /* Hide the images by default */
 .mySlides {
+  max-width: 100%;
+  height: auto;
   display: none;
 }
 
