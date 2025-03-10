@@ -2,11 +2,6 @@
 /* CSS Document */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300);
-html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
-.mySlides {display:none}
-.w3-tag, .fa {cursor:pointer}
-.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
-
 header {width: 100%;
   height: auto;  
   margin: 0; 
@@ -31,6 +26,38 @@ padding: 0;
 main {
   float: left;
   width: 60%; /* The width is 60%, by default */
+}
+h1 {
+  font-size: 2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: black;
+  font-family:"Times New Roman", Times, serif;
+}
+h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: black;
+  font-family:"Times New Roman", Times, serif;
+}
+h3 {
+  font-size: 1.2em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: black;
+  font-family:"Times New Roman", Times, serif;
+}
+h4 {
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: black;
+  font-family:"Times New Roman", Times, serif;
 }
 
 
@@ -63,7 +90,7 @@ p {
 .flex-container {
   padding: 2px 16px;
   flex-wrap:wrap;
-  align-self:self-start;
+text-align: left;
   align-items: center;
 }
 
@@ -74,10 +101,10 @@ p {
 /* Section */
 section
 {
- align-items: center;
+ align-items: left;
  background-color: gainsboro;
  width: 100%;
- text-align: center;
+ text-align: left;
   padding: 1em 0;
 }
 .img{
@@ -95,17 +122,9 @@ list-style-type: none;}
 
 /* Navigation */
 nav { position: absolute; top: 0px; left: 0px; padding: 50px 0px 50px 50px; width: 100%; }
-nav a:visited { color: rgb(255, 255, 255); }
-
-nav ul { list-style: none; margin: 0px; padding: 0px; }
-nav ul:after { content: ""; display: block; clear: both; }
-
-nav ul li:hover { background-color:  #da7a32; }
-nav ul li:hover > ul { display: block; }
-
-nav ul li a { display: inline-block; color: #da7a32;; padding: 10px 20px; text-decoration: none; width: 125px; position: relative; }
-nav ul li a:hover { background-color: #bba7a9; }
-
+nav a:visited { color: rgb(196, 197, 166); }
+nav a:link { color: rgb(196, 197, 166); }
+nav a:hover { color: rgb(172, 176, 63); }
 /* top level */
 nav > ul { padding-left: 200px; }
 nav > ul > li { float: left; }
