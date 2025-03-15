@@ -63,14 +63,16 @@ h4 {
 }
 
 
+
 /* Use a media query to add a breakpoint at 600px: */
 @media only screen and (max-width: 600px) {
   body {
-    background-color: rgb(120, 169, 119);
+    background-color: rgb(120, 167, 119);
     h3{ font-size: small;}
     p{ font-size: small;}
   }
 }
+
 
 logo{
   width: 100%;
