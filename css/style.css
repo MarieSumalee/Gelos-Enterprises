@@ -68,8 +68,6 @@ h4 {
 @media only screen and (max-width: 600px) {
   body {
     background-color: rgb(171, 182, 192);
-    font-size: 12px;
-    h2{ font-size: small;}
     h3{ font-size: small;}
     p{ font-size: small;}
   }
