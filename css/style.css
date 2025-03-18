@@ -420,12 +420,12 @@ border-radius: 16px;
 }
 
 
+
 article {
-  --img-scale: 2.001;
+  --img-scale: 1.001;
   --title-color: black;
   --link-icon-translate: -20px;
   --link-icon-opacity: 0;
-  -moz-box-pack: center;
   position: relative;
   border-radius: 16px;
   box-shadow: none;
@@ -433,7 +433,6 @@ article {
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
- align-items: center;
 }
 
 article a::after {
@@ -457,27 +456,15 @@ article h2 {
 figure {
   margin: 0;
   padding: 0;
-  aspect-ratio: 12/ 9;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  max-width: 100%;
-  img {
-    width: 450px;
-    height: 350px;
-    border-radius: 16px;
-  }
 }
 
 article img {
   max-width: 100%;
   transform-origin: center;
- justify-items: center;
- align-items: center;
   transform: scale(var(--img-scale));
   transition: transform 0.4s ease-in-out;
- border-radius: 16px;
 }
 
 .article-body {
