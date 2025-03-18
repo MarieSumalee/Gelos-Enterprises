@@ -14,7 +14,7 @@ body
 font-family: "fig tree", sans-serif;
 font-size: 16px;  
 font-family: "Playfair Display";
-background-color: rgb(127, 174, 126);
+background-color:rgb(171, 182, 192);
 letter-spacing: 2px;font-weight: 300; 
 margin: 0; 
 padding: 0; 
@@ -67,7 +67,9 @@ h4 {
 /* Use a media query to add a breakpoint at 600px: */
 @media only screen and (max-width: 600px) {
   body {
-    background-color: rgb(120, 167, 119);
+    background-color: rgb(171, 182, 192);
+    h1{ font-size: small;}
+    h2{ font-size: small;}
     h3{ font-size: small;}
     p{ font-size: small;}
   }
@@ -122,10 +124,14 @@ list-style-type: none;}
 
 
 /* Navigation */
-nav { position: absolute; top: 0px; left: 0px; padding: 50px 0px 50px 50px; width: 100%; }
-nav a:visited { color: rgb(196, 197, 166); }
-nav a:link { color: rgb(196, 197, 166); }
-nav a:hover { color: rgb(172, 176, 63); }
+nav { position: fixed; top: 0px; left: 0px; padding: 0px 50px 0px 0px; width: 100%; 
+height:auto; display: flexbox; display: flexbox;font-size: large;}
+nav a:visited { color: rgb(255, 255, 255); }
+nav a:link { color: rgb(230, 231, 216); }
+nav a:hover { color: rgba(234, 113, 52, 0.751); }
+nav text {color:rgba(251, 245, 243, 0.988);}
+nav carousel__navigation-button {color:rgba(121, 100, 93, 0.988);}
+
 /* top level */
 nav > ul { padding-left: 200px; }
 nav > ul > li { float: left; }
@@ -237,7 +243,7 @@ border-radius: 16px;
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: #faf9f9;
   font-size: 18px;
   padding: 8px 12px;
   position: absolute;
@@ -558,4 +564,33 @@ article:has(:hover, :focus) {
   --link-icon-translate: 0;
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+/* ######### 9. Footer ######### */
+footer {
+  margin-top: 1rem;
+}
+/* ######### 9a. Contact ######### */
+.form {
+  background-color:  rgb(203, 202, 201);
+  color: #434040;
+  padding: 1rem 1rem 2rem;
+}
+
+.form p {
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr .25fr;
+}
+
+/* ######### 9b. Footer > Connect ######### */
+.social, .contactInfo {
+  background-color: rgb(90, 147, 110);
+  color: #fff;
+  padding:0;
+  text-align: center;
 }
