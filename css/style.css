@@ -130,17 +130,16 @@ color: black;
   img {width: 100%;
 height: auto;
   }
-  padding: 0px 0px 50px 0px;
   }
 
 .nav-content {
   display: flex;
-  align-items: center;
-  gap: 0px; /* Space between logo and menu */
+  align-items: wrap;
+  gap: 15px; /* Space between logo and menu */
 }
 
 .logo {
-  max-width: 150px;
+  max-width: 130px;
   height: auto;
 }
 
@@ -161,11 +160,12 @@ height: auto;
   color: rgba(12, 56, 95, 0.988);
   padding: 10px 15px;
   background: #b0bec5;
+  display: inline-block;
   border-radius: 5px;
-  margin-right: 15px; /* Creates spacing between buttons */
+  margin-right: 5px; /* Creates spacing between buttons */
   transition: background 0.3s;
-  margin: top 15px;
-  margin-bottom: 15px;
+  margin: top 0px;
+  margin-bottom: 5px;
 }
 
 .nav-link:hover {
@@ -177,37 +177,8 @@ height: auto;
   border-radius: 15px;
   border: 1px solid #ccc;
 }
-@media only screen and (max-width: 600px) {
-  .nav-menu {
-      display: flex;
-      flex-direction: column; /* Stack items vertically */
-      align-items: center; /* Center items */
-      gap: 10px; /* Add spacing between items */
-  }
 
-  .nav-menu li {
-      width: 100%;
-      text-align: center;
-      padding: 5px 0; /* Add vertical padding */
-  }
 
-  .nav-link {
-      display: block; /* Make the buttons full width */
-      width: 90%; /* Ensure it takes most of the width */
-      padding: 12px;
-      text-align: center; /* Center text */
-  }
-}
-
-  .search-form {
-      width: 100%;
-      text-align: center;
-  }
-
-  .search-form input {
-      width: 90%;
-  }
-}
 /* Container holding the image and the text */
 .container {
   position: relative;
