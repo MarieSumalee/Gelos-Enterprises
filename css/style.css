@@ -75,8 +75,6 @@ h4 {
     p{ font-size: medium;}
   }
 }
-
-
 p { 
     margin: 1em ; 
     text-align: center; 
@@ -86,6 +84,7 @@ p {
     font-weight: 700;
   letter-spacing: 1px;
   }
+  
 /* Add some padding inside the card container */
 .flex-container {
   padding: 2px 16px;
@@ -121,12 +120,12 @@ list-style-type: none;}
 
 /* Navigation */
 .nav-container {
-  display:flex;
+  display:inline-flexbox;
   white-space: nowrap;
   justify-content: space-between;
   align-items: center;
 color: black;
-  padding: 0px;
+  padding: 0px; 
   img {width: 100%;
 height: auto;
   }
@@ -139,8 +138,16 @@ height: auto;
 }
 
 .logo {
-  max-width: 130px;
+  max-width:200px;
   height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border-radius: 50%;
+  margin-right: 0px; /* Creates spacing between logo and menu */
+  margin-top: 0px;
+  margin-bottom: 0px;
+
 }
 
 .nav-menu {
@@ -519,7 +526,10 @@ Generic layout styles
     container: card/inline-size;
   }
   .article-body p {
-    display: none;
+    display: 10px;
+  }
+  .logo {
+   display: none;
   }
 }
 
@@ -530,7 +540,7 @@ Generic layout styles
     gap: 16px;
   }
   .article-body {
-    padding-left: 0;
+    padding-left: 0px;
   }
   figure {
     width: 100%;
@@ -554,11 +564,11 @@ Generic layout styles
   width: 1px;
 }
 
-/* ######### 9. Footer ######### */
+/* #########  Footer ######### */
 footer {
   margin-top: 1rem;
 }
-/* ######### 9a. Contact ######### */
+/* #########  Contact ######### */
 .form {
   background-color:  rgb(203, 202, 201);
   color: #434040;
@@ -576,7 +586,7 @@ footer {
   grid-template-rows: 1fr .25fr;
 }
 
-/* ######### 9b. Footer > Connect ######### */
+/* ######### Social ######### */
 .social, .contactInfo {
   background-color: rgb(90, 147, 110);
   color: #fff;
