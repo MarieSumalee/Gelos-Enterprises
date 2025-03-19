@@ -62,37 +62,6 @@ h4 {
   font-family:"Times New Roman", Times, serif;
 }
 
-
-
-/* Use a media query to add a breakpoint at 600px: */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(171, 182, 192);
-    h1{ font-size: medium;}
-    h2{ font-size: medium;}
-    h3{ font-size: medium;}
-    h4{ font-size: medium;}
-    p{ font-size: medium;}
-  }
-}
-p { 
-    margin: 1em ; 
-    text-align: center; 
-    color: black;
-  font-size: 1em;
-    font-family:"Times New Roman", Times, serif;
-    font-weight: 700;
-  letter-spacing: 1px;
-  }
-  
-/* Add some padding inside the card container */
-.flex-container {
-  padding: 2px 16px;
-  flex-wrap:wrap;
-text-align: left;
-  align-items: center;
-}
-
 /* Section */
 section
 {
@@ -344,8 +313,6 @@ border-radius: 16px;
   background-color: rgb(72, 106, 91);
 }
 
-
-
 .carousel__snapper {
   position: absolute;
   top: 0;
@@ -521,7 +488,8 @@ Generic layout styles
   gap: 24px;
 }
 
-@media screen and (max-width: 960px) {
+/* Use a media query to add a breakpoint at 600px: */
+@media only screen and (max-width: 960px) {
   article {
     container: card/inline-size;
   }
@@ -529,9 +497,40 @@ Generic layout styles
     display: 10px;
   }
   .logo {
-   display: none;
+  padding-left: 0.5rem;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(171, 182, 192);
+    h1{ font-size: medium;}
+    h2{ font-size: medium;}
+    h3{ font-size: medium;}
+    h4{ font-size: medium;}
+    p{ font-size: medium;}
+  }
+}
+p { 
+    margin: 1em ; 
+    text-align: center; 
+    color: black;
+  font-size: 1em;
+    font-family:"Times New Roman", Times, serif;
+    font-weight: 700;
+  letter-spacing: 1px;
+  }
+  .logo {
+  display: none;
+    }
+/* Add some padding inside the card container */
+.flex-container {
+  padding: 2px 16px;
+  flex-wrap:wrap;
+text-align: left;
+  align-items: center;
+}
+
 
 @container card (min-width: 380px) {
   .article-wrapper {
