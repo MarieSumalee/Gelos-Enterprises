@@ -105,7 +105,8 @@ list-style-type: none;}
   background-color: #466069;
   align-items: right;
   padding: 20px;
-  width: 110%;
+  width: 100%;
+  height: auto;
   transition: 0.5s;
   border-radius: 0px 50px 0x 50px;
   overflow: hidden;
@@ -547,7 +548,7 @@ Generic layout styles
     h4{ font-size: medium;}
     p{ font-size: medium;}
  .nav, .menu {
-  display: flex;
+  display: fixed;
   justify-content: center;
   align-items: center;
   display: list-item;
