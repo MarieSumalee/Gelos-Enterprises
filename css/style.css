@@ -537,6 +537,9 @@ Generic layout styles
   .article-body p {
     display: 10px;
   }
+  .logo {
+    display: smaller;
+  }
 }
 /* Use a media query to add a breakpoint at 600px: */
 @media only screen and (max-width: 600px) {
@@ -548,13 +551,17 @@ Generic layout styles
     h4{ font-size: medium;}
     p{ font-size: medium;}
  .nav, .menu {
-  display: fixed;
+  display: smaller;
   justify-content: center;
   align-items: center;
+  font-size: smaller;
   display: list-item;
 }
       .logo {
-        display: none;
+        .logo {
+          display: x-small;
+          padding-left: ;
+        }
           }
   }
 }
