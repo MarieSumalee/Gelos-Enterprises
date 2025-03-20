@@ -346,7 +346,7 @@ border-radius: 16px;
   position: relative;
   flex: 0 0 100%;
   width: 80%;
-  background-color: #56334e;
+  background-color: #3a6676;
  counter-increment: item;
 }
 
@@ -557,12 +557,10 @@ Generic layout styles
   font-size: smaller;
   display: list-item;
 }
-      .logo {
         .logo {
-          display: x-small;
-          padding-left: ;
+          display: smaller;
         }
-          }
+         
   }
 }
 p { 
