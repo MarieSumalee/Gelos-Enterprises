@@ -81,8 +81,8 @@ M64.369568,119.363762
 	C65.002777,104.959702 64.815460,112.075455 64.369568,119.363762 
 z"/>
 <!-- Text -->
-    <text x="35" y="180" font-family="Times New Roman" font-size="25" fill="saddlebrown">GELOS</text>
-     <text x="5" y="205" font-family="Times New Roman" font-size="25" fill="black">ENTERPRISES</text>
+    <text x="35" y="180" font-family="Times New Roman" font-size="27" fill="saddlebrown">GELOS</text>
+     <text x="5" y="205" font-family="Times New Roman" font-size="27" fill="white">ENTERPRISES</text>
    
 </svg>
 
