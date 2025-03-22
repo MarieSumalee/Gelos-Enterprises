@@ -3,7 +3,7 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300);
 header {
-  height: 350px; 
+  height: 400px; 
   width: auto;  
   background: #72949c  url(../images/header.jpg) 
   no-repeat center bottom; 
@@ -209,9 +209,9 @@ list-style-type: none;}
 {
   header {
     align-items: center;
-    background: #72949c  url(../images/header01.jpg);
-    height: 350px; 
-    width: 500px;  
+    background: #72949c  url(../images/header02.jpg);
+    height: 320px; 
+    width: auto;  
     background-size: fixed; 
     background-position: center;
     background-attachment: fixed;
