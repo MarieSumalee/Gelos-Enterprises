@@ -2,25 +2,126 @@
 /* CSS Document */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300);
-header {width: 100%;
-  height: auto;  
+header {
+  height: 450px; 
+  width: auto;  
+  background: #72949c  url(../images/header.jpg) 
+  no-repeat center bottom; 
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   margin: 0; 
   padding: 0;
 }
-
 /* Body */
 body 
 { color: rgb(44, 42, 42); height: 100%; width: 100%;
-font-family: "fig tree", sans-serif;
+font-family: 'Times New Roman', Times, serif;
 font-size: 16px;  
-font-family: "Playfair Display";
 background-color:rgb(171, 182, 192);
 letter-spacing: 2px;font-weight: 300; 
 margin: 0; 
 padding: 0;
 align-items: center;
-
 }
+
+/* Callapse Navbar */
+.navbar {
+  display: flex;
+  font-size: small;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232737bb;
+  padding: 15px;
+}
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.navbar .menu {
+  display: none;
+  flex-direction: column;
+}
+.navbar .menu a {
+  padding: 10px;
+  border-top: 1px solid #444;
+}
+.navbar .toggle {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+@media (min-width: 600px) {
+  .navbar .menu {
+      display: flex;
+      flex-direction: row;
+  }
+  .navbar .toggle {
+      display: none;
+  }
+}
+
+/* Search Input */
+.search-form input {
+  display: fixed;;
+  padding: 10px;
+  padding-right: 10%;
+  align-items: right;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+}
+
+.logo {
+  justify-content: center;
+  display: fixed;
+  width: 100%;
+  height: 100px; /* Adjust height as needed */
+  padding-left: 25%;
+  padding-right: 15%;
+  padding-inline:22%;
+  padding-bottom: 25%;
+  padding-top: 4%;
+  position: static; /* Default positioning */
+  background: url(../images/logo.svg) no-repeat left;
+  background-size: contain;
+}
+
+
+.menu {
+  margin: 0;
+  padding-right: 20px;
+  width: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  font: small;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.5s;
+ 
+}
+
+.menu li a:hover {
+  color: #161919;
+}
+
+
 .left, .right {
   float: left;
   width: 20%; /* The width is 20%, by default */
@@ -29,7 +130,6 @@ align-items: center;
 main {
   float: left;
   width: 60%; /* The width is 60%, by default */
-  width: 100%;
 }
 h1 {
   font-size: 2em;
@@ -64,6 +164,15 @@ h4 {
   font-family:"Times New Roman", Times, serif;
 }
 
+p { 
+  margin: 1em ; 
+  text-align: center; 
+  color: black;
+font-size: 1em;
+  font-family:"Times New Roman", Times, serif;
+  font-weight: 700;
+letter-spacing: 1px;
+}
 /* Section */
 section
 {
@@ -89,111 +198,57 @@ li { float: left;
 list-style-type: none;}
 
 
-/* Navigation */
 
-.nav, .menu {
-  border-top-left-radius: 20%;
-  border-bottom-right-radius: 20%;
-  display: flex;
-  justify-content: center;
+
+/* Use a media query to add a breakpoint at 600px: */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(171, 182, 192);
+    h1{ font-size: medium;}
+    h2{ font-size: medium;}
+    h3{ font-size: medium;}
+    h4{ font-size: medium;}
+  }
+}
+p { 
+    margin: 1em ; 
+    text-align: center; 
+    color: black;
+  font-size: 1em;
+    font-family:"Times New Roman", Times, serif;
+    font-weight: 700;
+  letter-spacing: 1px;
+  }
+/* Add some padding inside the card container */
+.flex-container {
+  padding: 2px 16px;
+  flex-wrap:wrap;
+text-align: left;
   align-items: center;
 }
 
-.nav{
- align-items: center;
-  position: relative;
-  background-color: #466069;
-  align-items: right;
-  padding: 20px;
-  width: 100%;
-  height: auto;
-  transition: 0.5s;
-  border-radius: 0px 50px 0x 50px;
-  overflow: hidden;
-  box-shadow: 0 8px 15px rgba(247, 233, 233, 0.4);
+/* Section */
+section
+{
+ align-items: right;
+ background-color: rgb(244, 243, 242);
+ width: 100%;
+ text-align: left;
+  padding: 1em 0;
 }
+.img{
+  align-items: center;
+  padding: 0;
+}
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+li { float: left; 
+list-style-type: none;}
 
-.menu {
-  margin: 0;
-  padding-right: 20px;
-  width: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-}
 
-.nav input:checked ~ .menu {
-  text-size-adjust: 5px;
-  font-size: x-small;
-  width: 400px;
-  .logo{
-    display:smaller;
-  }
-}
-
-.menu li {
-  list-style: none;
-  margin: 0 10px;
-}
-
-.menu li a {
-  text-decoration: none;
-  color: #fff;
-  font: small;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: 0.5s;
- 
-}
-
-.menu li a:hover {
-  color: #161919;
-}
-
-.nav input {
-  width: 40px;
-  height: 60px;
-  cursor: pointer;
-  opacity: 0;
-}
-
-.nav span {
-  position: absolute;
-  left: 30px;
-  width: 30px;
-  height: 4px;
-  border-radius: 20px;
-  font: small;
-  background-color: transparent;
-  pointer-events: none;
-  transition: 0.5s;
-}
-
-.nav input:checked ~ span {
-  background-color: #f974a1;
-}
-
-.nav span:nth-child(2) {
-  transform: translateY(-8px);
-}
-
-.nav input:checked ~ span:nth-child(2) {
-  transform: translateY(0) rotate(-45deg);
-}
-.nav span:nth-child(3) {
-  transform: translateY(8px);
-}
-
-.nav input:checked ~ span:nth-child(3) {
-  transform: translateY(0) rotate(45deg);
-}
-.search-form input {
-  display: fixed;;
-  padding: 10px;
-  padding-right: 10%;
-  align-items: right;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-}
 
 
 /* Container holding the image and the text */
@@ -346,13 +401,15 @@ border-radius: 16px;
   position: relative;
   flex: 0 0 100%;
   width: 80%;
-  background-color: #3a6676;
+  background-color: rgb(72, 106, 91);
  counter-increment: item;
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: #3a6676;
+  background-color: rgb(72, 106, 91);
 }
+
+
 
 .carousel__snapper {
   position: absolute;
@@ -468,6 +525,7 @@ figure {
   overflow: hidden;
 }
 
+
 article img {
   max-width: 100%;
   transform-origin: center;
@@ -508,116 +566,11 @@ article:has(:hover, :focus) {
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-
-
-/************************ 
-Generic layout styles
-**************************/
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.articles {
-  display: grid;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
-
-
-@media only screen and (max-width: 960px) {
-  article {
-    container: card/inline-size;
-  }
-  .article-body p {
-    display: 10px;
-  }
-  .logo {
-    display: smaller;
-  }
-}
-/* Use a media query to add a breakpoint at 600px: */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(171, 182, 192);
-    h1{ font-size: medium;}
-    h2{ font-size: medium;}
-    h3{ font-size: medium;}
-    h4{ font-size: medium;}
-    p{ font-size: medium;}
- .nav, .menu {
-  display: smaller;
-  justify-content: center;
-  align-items: center;
-  font-size: smaller;
-  display: list-item;
-}
-        .logo {
-          display: smaller;
-        }
-         
-  }
-}
-p { 
-    margin: 1em ; 
-    text-align: center; 
-    color: black;
-  font-size: 1em;
-    font-family:"Times New Roman", Times, serif;
-    font-weight: 700;
-  letter-spacing: 1px;
-  }
-
-/* Add some padding inside the card container */
-.flex-container {
-  padding: 2px 16px;
-  flex-wrap:wrap;
-text-align: left;
-  align-items: center;
-}
-
-
-@container card (min-width: 380px) {
-  .article-wrapper {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 16px;
-  }
-  .article-body {
-    padding-left: 0px;
-  }
-  figure {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  figure img {
-    height: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-  }
-}
-
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
-}
-
-/* #########  Footer ######### */
+/* ######### 9. Footer ######### */
 footer {
   margin-top: 1rem;
 }
-/* #########  Contact ######### */
+/* ######### 9a. Contact ######### */
 .form {
   background-color:  rgb(203, 202, 201);
   color: #434040;
@@ -635,7 +588,7 @@ footer {
   grid-template-rows: 1fr .25fr;
 }
 
-/* ######### Social ######### */
+/* ######### 9b. Footer > Connect ######### */
 .social, .contactInfo {
   background-color: rgb(90, 147, 110);
   color: #fff;
