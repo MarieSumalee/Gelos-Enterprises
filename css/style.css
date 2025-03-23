@@ -616,7 +616,7 @@ article:has(:hover, :focus) {
 footer {
   margin-top: 0%;
   margin-bottom: auto;
-  padding-left: 14px;
+  padding-left: 0.0px;
   background-color: #232737bb;
   color: rgb(242, 242, 242);
   display: grid;
