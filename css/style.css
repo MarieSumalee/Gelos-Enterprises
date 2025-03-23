@@ -502,8 +502,6 @@ border-radius: 16px;
   outline: 0;
 }
 
-
-
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -584,11 +582,12 @@ article:has(:hover, :focus) {
   --link-icon-opacity: 1;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
-/* ######### 9. Footer ######### */
+
+/* Footer a */
 footer {
   margin-top: 1rem;
 }
-/* ######### 9a. Contact ######### */
+/* Contact form */
 .form {
   background-color:  rgb(203, 202, 201);
   color: #434040;
@@ -606,7 +605,7 @@ footer {
   grid-template-rows: 1fr .25fr;
 }
 
-/* ######### 9b. Footer > Connect ######### */
+/* Social */
 .social, .contactInfo {
   background-color: rgb(90, 147, 110);
   color: #fff;
