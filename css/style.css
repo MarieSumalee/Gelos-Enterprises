@@ -285,6 +285,19 @@ list-style-type: none;}
 
 }
 
+footer {
+  margin-top: 0%;
+  margin-bottom: auto;
+  padding-left: 0.0px;
+  background-color: #232737bb;
+  color: rgb(242, 242, 242);
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+
+}
+
 
 /* Container holding the image and the text */
 .container {
@@ -619,11 +632,10 @@ footer {
   padding-left: 0.0px;
   background-color: #232737bb;
   color: rgb(242, 242, 242);
-  display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr .00fr;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 /* Social */
