@@ -62,7 +62,6 @@ align-items: center;
   font-size: 20px;
   color: white;
 }
-
 .search-form input {
   inset-block-start: 0px;
   inset-inline-start: 0px;
@@ -90,6 +89,7 @@ align-items: center;
 
 /*Set media query for smaller screens */
 /* Navbar */
+
 @media (min-width: 600px) {
   
   .navbar .menu {
@@ -227,6 +227,14 @@ list-style-type: none;}
     padding: 0;
     
   }
+ 
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1px;
+    }
+  
 
   body {
     background-color: rgb(171, 182, 192);
@@ -427,12 +435,12 @@ border-radius: 16px;
   position: relative;
   flex: 0 0 100%;
   width: 80%;
-  background-color: rgb(72, 106, 91);
+  background-color: rgb(64, 70, 93);
  counter-increment: item;
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: rgb(72, 106, 91);
+  background-color: rgb(64, 70, 93);
 }
 
 
@@ -592,11 +600,27 @@ article:has(:hover, :focus) {
 }
 
 /* Footer a */
+
 footer {
-  margin-top: 1rem;
+  margin-top: 0%;
+  margin-bottom: auto;
+  padding: 1rem;
+  background-color: #232737bb;
+  color: rgb(42, 36, 36);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr .01fr;
 }
-/* Contact form */
+
+/* Social */
+.social, .contactInfo {
+  color: #473b3b;
+  padding:0;
+  text-align: center;
+}
+  /* Contact form */
 .form {
+  display: inline-block;
   background-color:  rgb(203, 202, 201);
   color: #434040;
   padding: 1rem 1rem 2rem;
@@ -604,19 +628,6 @@ footer {
 
 .form p {
   font-weight: 300;
-  padding-bottom: 1rem;
-}
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr .25fr;
-}
-
-/* Social */
-.social, .contactInfo {
-  background-color: rgb(90, 147, 110);
-  color: #fff;
-  padding:0;
-  text-align: center;
+  padding-bottom: 0rem;
+  color: #434040;
 }
