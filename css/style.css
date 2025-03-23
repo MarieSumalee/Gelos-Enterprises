@@ -62,6 +62,7 @@ align-items: center;
   font-size: 20px;
   color: white;
 }
+s
 .search-form input {
   inset-block-start: 0px;
   inset-inline-start: 0px;
@@ -530,6 +531,16 @@ article {
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
+  margin-top: 0%;
+  margin-bottom: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "figure"
+    "article-body";
 }
 
 article a::after {
@@ -560,6 +571,7 @@ figure {
 
 article img {
   max-width: 100%;
+  align-self: center;
   transform-origin: center;
   transform: scale(var(--img-scale));
   transition: transform 0.4s ease-in-out;
