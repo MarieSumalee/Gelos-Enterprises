@@ -46,8 +46,7 @@ align-items: center;
   text-align: center;
 }
 .navbar a:hover {
-  background-color: #cdd7da9d;
-  color: rgb(123, 195, 236);
+  background-color: #4ecef59d;
 }
 .navbar .menu {
   display: none;
@@ -57,7 +56,8 @@ align-items: center;
   padding: 10px;
   padding-top: 0%;
   border-top: 1px solid #444;
-  font-size: medium;
+  font-size: smaller;
+  font-weight: 800;
 }
 .navbar .toggle {
   cursor: pointer;
@@ -90,10 +90,11 @@ align-items: center;
   background-size: contain;
 }
 
+
 /*Set media query for smaller screens */
 /* Navbar */
 
-@media (min-width: 600px) {
+@media (min-width: 690px) {
   
   .navbar .menu {
       display: flex;
@@ -254,6 +255,7 @@ list-style-type: none;}
 }
 
     .navbar .toggle {
+      display: flex;
       padding-inline-start: 0%;
       cursor: pointer;
       font-size: smaller; 
