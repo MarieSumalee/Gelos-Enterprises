@@ -31,12 +31,12 @@ align-items: center;
 
 /* Callapse Navbar */
 .navbar {
-  display: flex;
-  font-size: small;
+  display:flexbox;
+  font-size: 12px;
   justify-content: space-between;
   align-items: center;
   background-color: #232737bb;
-  padding: 20px;
+  padding: 17px;
   border-radius: 10%;
 }
 .navbar a {
@@ -46,7 +46,7 @@ align-items: center;
   text-align: center;
 }
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #cdd7da9d;
   color: black;
 }
 .navbar .menu {
