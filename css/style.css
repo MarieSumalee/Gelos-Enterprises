@@ -616,17 +616,20 @@ article:has(:hover, :focus) {
 footer {
   margin-top: 0%;
   margin-bottom: auto;
-  padding: 1rem;
+  padding-left: 14px;
   background-color: #232737bb;
-  color: rgb(42, 36, 36);
+  color: rgb(242, 242, 242);
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr .01fr;
+  grid-template-rows: 1fr .00fr;
 }
 
 /* Social */
 .social, .contactInfo {
   color: #473b3b;
+  background-color: #7493be;
   padding:0;
   text-align: center;
 }
@@ -634,12 +637,12 @@ footer {
 .form {
   display: inline-block;
   background-color:  rgb(203, 202, 201);
-  color: #434040;
+  color: #fdfdfd;
   padding: 1rem 1rem 2rem;
 }
 
 .form p {
   font-weight: 300;
   padding-bottom: 0rem;
-  color: #434040;
+  color: #fbfbfb;
 }
