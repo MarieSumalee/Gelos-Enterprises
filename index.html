@@ -17,36 +17,22 @@
     <a href="https://www.flaticon.com/free-icons/icloud" title="icloud icons"></a>
  <!-- Header -->
  <header id="home">
-  <br>
-  <div class="logo menu display flex">
+  <div class="menu logo display flex" id="logo">
 <div class="navbar">
-  <span class="toggle" onclick="toggleMenu()">☰</span>
   <ul class="menu">  
     <li><a href="#about" class="nav-link">About</a></li>
     <li><a href="#offering" class="nav-link">Offering</a></li>
     <li><a href="#values" class="nav-link">Company Values</a></li>
     <li><a href="#contact" class="nav-link">Contact Us</a></li>
-</ul>
+    <li class="search-form">
+      <input type="search" placeholder="Search...">
+    </li>
+
+  </ul>
 </div>
 </div>
- <!--  JavaScript to toggle the menu on and off -->
-<script>
-  function toggleMenu() {
-      const menu = document.querySelector('.navbar .menu');
-      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  }
-</script>
 </header>
 <!-- End of Header -->
-
-<div class="w3-display-middle w3-padding-64">
-  <form class="search-form">
-    <input type="search" placeholder="Search...">
-    <br> 
-    <br>
-    <br>
-  </form>
-</div>
 
 <!-- About -->
  
