@@ -2,26 +2,119 @@
 /* CSS Document */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300);
-header {width: 100%;
-  height: auto;  
-  margin: 0; 
-  padding: 0;
+header {
+  height: 400px; 
+  width: 100%; /* Ensures the header spans the full width of the viewport */
+  background: #72949c url(../images/header.jpg) no-repeat center bottom; 
+  position: relative;
+  background-size: cover; /* Scales the image proportionally to cover the area */
+  background-position: center; 
 }
 
 /* Body */
 body 
 { color: rgb(44, 42, 42); height: 100%; width: 100%;
-font-family: "fig tree", sans-serif;
+font-family: 'Times New Roman', Times, serif;
 font-size: 16px;  
-font-family: "Playfair Display";
 background-color:rgb(171, 182, 192);
 letter-spacing: 2px;font-weight: 300; 
 margin: 0; 
-padding: 0; 
+padding: 0;
+align-items: center;
 }
-.left, .right {
-  float: left;
-  width: 20%; /* The width is 20%, by default */
+.search-form input {
+  inset-block-start: 0px;
+  inset-inline-start: 0px;
+  inset-inline-end:10px;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.logo {
+  justify-content: center;
+  display:flex;
+  width: 80px;
+  height: 69px; /* Adjust height as needed */
+  padding-left: 5%;
+  padding-right: 15%;
+  padding-inline:15%;
+  padding-bottom: 15%;
+  padding-top: 5%;
+  position: static; /* Default positioning */
+  background: url(../images/logo.svg) no-repeat left;
+  background-size: contain;
+}
+ 
+button {
+  background-color: #9fa2b2;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+}
+/* Default styling for smaller screens */
+.navbar {
+    display: flex;
+    text-align: center;
+    background-color: #5c6275;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.navbar a {
+  display: inline-flex;
+  align-content: flex-start;
+    color: rgb(255, 255, 255);
+    row-gap: 20px;
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color: #ac9a8e;
+    color: black;
+}
+.navbar .menu {
+    display: none;
+    flex-direction: column;
+}
+.navbar .menu a {
+    padding: 10px;
+    color: rgb(247, 247, 247);
+    border-top: 1px solid #444;
+}
+.navbar .toggle {
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    font-display:inherit;
+}
+@media (min-width: 600px) {
+    .navbar .menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar .toggle {
+        display: none;
+    }
+}
+.search-form input {
+  display: fixed;;
+  padding: 10px;
+  padding-right: 10%;
+  align-items: right;
+  border-radius: 15px;
+  border: 1px solid #ccc;
 }
 
 main {
@@ -76,7 +169,7 @@ section
   padding: 0;
   width: 100%;
   height: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
 }
 ul.no-bullets {
   list-style-type: none; /* Remove bullets */
@@ -85,75 +178,6 @@ ul.no-bullets {
 }
 li { float: left; 
 list-style-type: none;}
-
-
-/* Navigation */
-.nav-container {
-  display:inline-flexbox;
-  white-space: nowrap;
-  justify-content: space-between;
-  align-items: center;
-color: black;
-  padding: 0px; 
-  img {width: 100%;
-height: auto;
-  }
-  }
-
-.nav-content {
-  display: flex;
-  align-items: wrap;
-  gap: 15px; /* Space between logo and menu */
-}
-
-.logo {
-  max-width:200px;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  border-radius: 50%;
-  margin-right: 0px; /* Creates spacing between logo and menu */
-  margin-top: 0px;
-  margin-bottom: 0px;
-
-}
-
-.nav-menu {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 15px;
-}
-
-.nav-menu li {
-  display: flexbox;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: rgba(12, 56, 95, 0.988);
-  padding: 10px 15px;
-  background: #b0bec5;
-  display: inline-block;
-  border-radius: 5px;
-  margin-right: 5px; /* Creates spacing between buttons */
-  transition: background 0.3s;
-  margin: top 0px;
-  margin-bottom: 5px;
-}
-
-.nav-link:hover {
-  background: #90a4ae;
-}
-
-.search-form input {
-  padding: 5px;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-}
-
 
 /* Container holding the image and the text */
 .container {
@@ -305,12 +329,12 @@ border-radius: 16px;
   position: relative;
   flex: 0 0 100%;
   width: 80%;
-  background-color: rgb(72, 106, 91);
+  background: #98a6a3;
  counter-increment: item;
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: rgb(72, 106, 91);
+  background-color: #98a6a3;
 }
 
 .carousel__snapper {
@@ -387,7 +411,7 @@ border-radius: 16px;
 }
 
 
-
+/* article */
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -396,7 +420,7 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #fff;
+  background: #d6e8e4;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -421,17 +445,18 @@ article h2 {
 }
 
 figure {
-  margin: 0;
-  padding: 0;
-  aspect-ratio: 16 / 9;
+  margin: 40px;
+  padding: 15px;
+  aspect-ratio: 15/8;
   overflow: hidden;
 }
 
 article img {
-  max-width: 100%;
+  max-width: 50%;
   transform-origin: center;
   transform: scale(var(--img-scale));
   transition: transform 0.4s ease-in-out;
+  border-radius: 16%;
 }
 
 .article-body {
@@ -488,7 +513,7 @@ Generic layout styles
   gap: 24px;
 }
 
-/* Use a media query to add a breakpoint at 600px: */
+
 @media only screen and (max-width: 960px) {
   article {
     container: card/inline-size;
@@ -497,10 +522,10 @@ Generic layout styles
     display: 10px;
   }
   .logo {
-  padding-left: 0.5rem;
+    display: smaller;
   }
 }
-
+/* Use a media query to add a breakpoint at 600px: */
 @media only screen and (max-width: 600px) {
   body {
     background-color: rgb(171, 182, 192);
@@ -509,6 +534,21 @@ Generic layout styles
     h3{ font-size: medium;}
     h4{ font-size: medium;}
     p{ font-size: medium;}
+ .nav, .menu {
+  display: smaller;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
+  padding: 25px;
+}
+        .logo {
+          display: smaller;
+        }
+         
   }
 }
 p { 
@@ -520,9 +560,7 @@ p {
     font-weight: 700;
   letter-spacing: 1px;
   }
-  .logo {
-  display: none;
-    }
+
 /* Add some padding inside the card container */
 .flex-container {
   padding: 2px 16px;
@@ -563,32 +601,61 @@ text-align: left;
   width: 1px;
 }
 
-/* #########  Footer ######### */
+
+/* Footer a */
 footer {
   margin-top: 1rem;
-}
-/* #########  Contact ######### */
-.form {
-  background-color:  rgb(203, 202, 201);
-  color: #434040;
-  padding: 1rem 1rem 2rem;
-}
-
-.form p {
-  font-weight: 300;
-  padding-bottom: 1rem;
-}
-
-footer {
+  margin-bottom: auto;
+  padding-left: 0.0px;
+  background-color: #d9dadcbb;
+  color: rgb(242, 242, 242);
+  align-items: center;
+  justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr .25fr;
+  grid-template-rows: auto;
+  text-align: center;
 }
 
-/* ######### Social ######### */
+/* Social */
 .social, .contactInfo {
-  background-color: rgb(90, 147, 110);
-  color: #fff;
+  color: #342f2f;
+  background-color: #dedfe1;
   padding:0;
   text-align: center;
 }
+  /* Contact form */
+.form {
+  display: inline-block;
+  background-color:  rgb(204, 202, 199);
+  color: #3c3535;
+  padding: 1rem 1rem 2rem;
+}
+
+
+.form p {
+  font-weight: 300;
+  padding-bottom: 0rem;
+  color: #fbfbfb;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+  footer {
+      display: block;
+    }
+    
+    footer .form {
+      display: block;
+      align-items: center;
+    }
+    footer .social {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  
+  }
+
