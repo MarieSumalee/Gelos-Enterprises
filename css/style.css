@@ -3,20 +3,14 @@
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300);
 header {
-  height: 350px; 
+  height: 400px; 
   width: 100%; /* Ensures the header spans the full width of the viewport */
   background: #72949c url(../images/header.jpg) no-repeat center bottom; 
   position: relative;
   background-size: cover; /* Scales the image proportionally to cover the area */
   background-position: center; 
-  background-attachment: scroll; /* Use scroll for better performance and clarity on smaller screens */
-  padding-inline-start: 0%;
-  padding-inline-end: 5%;
-  padding-block-start: 0%;
-  padding-block-end: 10%;
 }
 
-/* Navbar */
 /* Body */
 body 
 { color: rgb(44, 42, 42); height: 100%; width: 100%;
@@ -28,53 +22,6 @@ margin: 0;
 padding: 0;
 align-items: center;
 }
-
-/* Callapse Navbar */
-.navbar {
-  display:flexbox;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #0f1d41bb;
-  padding: 17px;
-  border-radius: 0%;
-}
-.navbar a {
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-.navbar a:hover {
-  background-color: #ffffffbc;
-}
-.navbar .menu {
-  display: none;
-  flex-direction: row-reverse;
-  font-size: small;
-  font-weight: 800;
-  padding: 0%;
-  padding-block-start: 0%;
-  padding-block-end: 0%;
-  justify-content: space-between;
-  align-items: left;
-  width: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-}
-.navbar .menu a {
-  padding: 10px;
-  padding-top: 0%;
-  border-top: 1px solid #444;
-  font-size: smaller;
-  font-weight: 800;
-}
-.navbar .toggle {
-  cursor: pointer;
-  font-size: 50px;
-  color: white;
-  padding-inline-end: 35%;
-}
-
 .search-form input {
   inset-block-start: 0px;
   inset-inline-start: 0px;
@@ -87,78 +34,93 @@ align-items: center;
 }
 .logo {
   justify-content: center;
-  display: fixed;
-  width: 80%;
+  display:flex;
+  width: 80px;
   height: 69px; /* Adjust height as needed */
-  padding-left: 25%;
+  padding-left: 5%;
   padding-right: 15%;
-  padding-inline:22%;
-  padding-bottom: 25%;
-  padding-top: 4%;
+  padding-inline:15%;
+  padding-bottom: 15%;
+  padding-top: 5%;
   position: static; /* Default positioning */
   background: url(../images/logo.svg) no-repeat left;
   background-size: contain;
 }
-
-
-/*Set media query for smaller screens */
-/* Navbar */
-
-@media (min-width: 690px) {
-  
-  .navbar .menu {
-      display: flex;
-      flex-direction: row;
-      padding-top: 0%;
-      padding-inline-start: 0%;
-
-  }
-  .navbar .toggle {
-      display: none;
-  }
+ 
+button {
+  background-color: #9fa2b2;
+  color: white;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
 }
 /* Default styling for smaller screens */
-.search-form{
-  display: block; /* Search box is visible by default */
+.navbar {
+    display: flex;
+    text-align: center;
+    background-color: #6c8eac;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: medium;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
-
-
-.menu {
-  margin: 0;
-  padding-right: 20px;
-  width: 100%;
-  overflow: hidden;
-  transition: 0.5s;
+.navbar a {
+  display: inline-flex;
+  align-content: flex-start;
+    color: rgb(255, 255, 255);
+    row-gap: 20px;
+    padding-top: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
 }
-
-.menu li {
-  list-style: none;
-  margin: 0 10px;
+.navbar a:hover {
+    background-color: #ac9a8e;
+    color: black;
 }
-
-.menu li a {
-  text-decoration: none;
-  color: #fff;
-  font: small;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: 0.5s;
- 
+.navbar .menu {
+    display: none;
+    flex-direction: column;
 }
-
-.menu li a:hover {
-  color: #161919;
+.navbar .menu a {
+    padding: 10px;
+    color: rgb(247, 247, 247);
+    border-top: 1px solid #444;
 }
-
-
-.left, .right {
-  float: left;
-  width: 20%; /* The width is 20%, by default */
+.navbar .toggle {
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    font-display:inherit;
+}
+@media (min-width: 600px) {
+    .navbar .menu {
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar .toggle {
+        display: none;
+    }
+}
+.search-form input {
+  display: fixed;;
+  padding: 10px;
+  padding-right: 10%;
+  align-items: right;
+  border-radius: 15px;
+  border: 1px solid #ccc;
 }
 
 main {
   float: left;
   width: 60%; /* The width is 60%, by default */
+  width: 100%;
 }
 h1 {
   font-size: 2em;
@@ -193,15 +155,6 @@ h4 {
   font-family:"Times New Roman", Times, serif;
 }
 
-p { 
-  margin: 1em ; 
-  text-align: center; 
-  color: black;
-font-size: 1em;
-  font-family:"Times New Roman", Times, serif;
-  font-weight: 700;
-letter-spacing: 1px;
-}
 /* Section */
 section
 {
@@ -216,7 +169,7 @@ section
   padding: 0;
   width: 100%;
   height: auto;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 10px 0px 10px;
 }
 ul.no-bullets {
   list-style-type: none; /* Remove bullets */
@@ -225,102 +178,6 @@ ul.no-bullets {
 }
 li { float: left; 
 list-style-type: none;}
-
-
-
-
-/* Use a media query to add a breakpoint at 690px: */
-@media only screen and (max-width: 690px) {
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #72949c url(../images/header01.jpg) no-repeat center;
-    height: 300px;
-    width: 100%;
-    background-size: cover; /* Ensures the image covers the available space proportionally */
-    background-attachment: scroll; /* Prevents a fixed image from looking distorted on small screens */
-    margin: 0;
-    padding: 0;
-    
-  }
-    navbar {
-      display: flex;
-      flex-direction: row;
-      padding: auto;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .navbar .menu {
-      display: flex;
-      flex-direction: column;
-  }
-  .navbar .menu a {
-    padding: 2cqmin; /* Increased padding */
-    border-top: 1px solid #444;
-    font-size: smaller; /* Increased font size */
-    padding-top: 1%;
-    padding-inline-start: 5%;
-    padding-inline-end: 2%;
-}
-
-    .navbar .toggle {
-      display: flex;
-      padding-inline-start: 0%;
-      cursor: pointer;
-      font-size: smaller; 
-      color: white;
-      padding-bottom: 0px;
-      padding-inline-start: 0px;
-      padding-inline-end:0px;
-    }
-  body {
-    background-color: rgb(171, 182, 192);
-    h1{ font-size: medium;}
-    h2{ font-size: medium;}
-    h3{ font-size: medium;}
-    h4{ font-size: medium;}
-  }
-  
-p { 
-    margin: 1em ; 
-    text-align: center; 
-    color: black;
-  font-size: 1em;
-    font-family:"Times New Roman", Times, serif;
-    font-weight: 700;
-  letter-spacing: 1px;
-  }
-/* Add some padding inside the card container */
-.flex-container {
-  padding: 2px 16px;
-  flex-wrap:wrap;
-text-align: left;
-  align-items: center;
-}
-
-/* Section */
-section
-{
- align-items: right;
- background-color: rgb(244, 243, 242);
- width: 100%;
- text-align: left;
-  padding: 1em 0;
-}
-.img{
-  align-items: center;
-  padding: 0;
-}
-ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
-}
-li { float: left; 
-list-style-type: none;}
-
-}
 
 /* Container holding the image and the text */
 .container {
@@ -472,15 +329,13 @@ border-radius: 16px;
   position: relative;
   flex: 0 0 100%;
   width: 80%;
-  background-color: rgb(64, 70, 93);
+  background: #98a6a3;
  counter-increment: item;
 }
 
 .carousel__slide:nth-child(even) {
-  background-color: rgb(64, 70, 93);
+  background-color: #98a6a3;
 }
-
-
 
 .carousel__snapper {
   position: absolute;
@@ -555,6 +410,8 @@ border-radius: 16px;
   outline: 0;
 }
 
+
+/* article */
 article {
   --img-scale: 1.001;
   --title-color: black;
@@ -563,20 +420,10 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #fff;
+  background: #d6e8e4;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  margin-top: 0%;
-  margin-bottom: auto;
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "figure"
-    "article-body";
 }
 
 article a::after {
@@ -598,19 +445,18 @@ article h2 {
 }
 
 figure {
-  margin: 0;
-  padding: 0;
-  aspect-ratio: 16 / 9;
+  margin: 40px;
+  padding: 15px;
+  aspect-ratio: 15/8;
   overflow: hidden;
 }
 
-
 article img {
-  max-width: 100%;
-  align-self: center;
+  max-width: 50%;
   transform-origin: center;
   transform: scale(var(--img-scale));
   transition: transform 0.4s ease-in-out;
+  border-radius: 16%;
 }
 
 .article-body {
@@ -647,32 +493,142 @@ article:has(:hover, :focus) {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+
+/************************ 
+Generic layout styles
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.articles {
+  display: grid;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+
+@media only screen and (max-width: 960px) {
+  article {
+    container: card/inline-size;
+  }
+  .article-body p {
+    display: 10px;
+  }
+  .logo {
+    display: smaller;
+  }
+}
+/* Use a media query to add a breakpoint at 600px: */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(171, 182, 192);
+    h1{ font-size: medium;}
+    h2{ font-size: medium;}
+    h3{ font-size: medium;}
+    h4{ font-size: medium;}
+    p{ font-size: medium;}
+ .nav, .menu {
+  display: smaller;
+  justify-content: center;
+  align-items: center;
+  font-size: smaller;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 15px;
+  padding: 25px;
+}
+        .logo {
+          display: smaller;
+        }
+         
+  }
+}
+p { 
+    margin: 1em ; 
+    text-align: center; 
+    color: black;
+  font-size: 1em;
+    font-family:"Times New Roman", Times, serif;
+    font-weight: 700;
+  letter-spacing: 1px;
+  }
+
+/* Add some padding inside the card container */
+.flex-container {
+  padding: 2px 16px;
+  flex-wrap:wrap;
+text-align: left;
+  align-items: center;
+}
+
+
+@container card (min-width: 380px) {
+  .article-wrapper {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+  }
+  .article-body {
+    padding-left: 0px;
+  }
+  figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  figure img {
+    height: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+
 /* Footer a */
 footer {
   margin-top: 1rem;
   margin-bottom: auto;
   padding-left: 0.0px;
-  background-color: #232737bb;
+  background-color: #d9dadcbb;
   color: rgb(242, 242, 242);
   align-items: center;
   justify-content: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  text-align: center;
 }
 
 /* Social */
 .social, .contactInfo {
-  color: #473b3b;
-  background-color: #7493be;
+  color: #342f2f;
+  background-color: #dedfe1;
   padding:0;
   text-align: center;
 }
   /* Contact form */
 .form {
   display: inline-block;
-  background-color:  rgb(203, 202, 201);
-  color: #fdfdfd;
+  background-color:  rgb(204, 202, 199);
+  color: #3c3535;
   padding: 1rem 1rem 2rem;
 }
 
@@ -692,11 +648,14 @@ footer {
     
     footer .form {
       display: block;
+      align-items: center;
     }
     footer .social {
       display: flex;
       align-items: center;
       flex-direction: column;
+      text-align: center;
     }
   
-}
+  }
+
