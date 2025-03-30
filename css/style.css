@@ -18,7 +18,7 @@ color: rgb(44, 42, 42);
   width: 100%;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 14px;  
-background-color: rgb(171, 182, 192);
+background-color: rgb(236, 239, 241);
 letter-spacing: 2px;font-weight: 300; 
 margin: 0; 
 padding: 0;
@@ -424,7 +424,7 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #b7d4da;
+  background: #bec5c7;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -613,12 +613,12 @@ text-align: left;
 /* Container holding the image and the text */
 
 .container-grid {
-  background-color: rgba(236, 238, 235, 0.841);
+  background-color: rgba(248, 253, 245, 0.841);
   padding: 10px;
 }
 
 .container-grid  > div {
-  background-color: #cbe3f2;
+  background-color: #dfeef7;
   color: #000;
   padding: 10px;
   font-size: 15px;
