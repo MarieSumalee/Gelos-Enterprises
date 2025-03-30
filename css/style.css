@@ -1,682 +1,356 @@
-
-/* CSS Document */
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,700,300);
-header {
-  height: 400px; 
-  width: 100%; /* Ensures the header spans the full width of the viewport */
-  background: #72949c url(../images/header.jpg) no-repeat center bottom; 
-  position: relative;
-  background-size: cover; /* Scales the image proportionally to cover the area */
-  background-position: center; 
-}
-
-/* Body */
-body {
-color: rgb(44, 42, 42); 
-  height: 100%; 
-  width: 100%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-font-size: 14px;  
-background-color: rgb(171, 182, 192);
-letter-spacing: 2px;font-weight: 300; 
-margin: 0; 
-padding: 0;
-align-items: center;
-}
-.search-form input {
-  inset-block-start: 0px;
-  inset-inline-start: 0px;
-  inset-inline-end:10px;
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-right: 10px;
-}
-.logo {
-  justify-content: center;
-  display:flex;
-  width: 80px;
-  height: 69px; /* Adjust height as needed */
-  padding-left: 5%;
-  padding-right: 15%;
-  padding-inline:15%;
-  padding-bottom: 15%;
-  padding-top: 5%;
-  position: static; /* Default positioning */
-  background: url(../images/logo.svg) no-repeat left;
-  background-size: contain;
-}
-
-button {
-  background-color: #9fa2b2;
-  color: white;
-  padding: 10px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 5px;
-}
-/* Default styling for smaller screens */
-.navbar {
-    display: flex;
-    text-align: center;
-    background-color: #5c6275;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: medium;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-}
-.navbar a {
-  display: inline-flex;
-  align-content: flex-start;
-    color: rgb(255, 255, 255);
-    row-gap: 20px;
-    padding-top: 15%;
-    padding-left: 15%;
-    padding-right: 15%;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-}
-.navbar a:hover {
-    background-color: #ac9a8e;
-    color: black;
-}
-.navbar .menu {
-    display: none;
-    flex-direction: column;
-}
-.navbar .menu a {
-    padding: 10px;
-    color: rgb(247, 247, 247);
-    border-top: 1px solid #444;
-}
-.navbar .toggle {
-    cursor: pointer;
-    font-size: 40px;
-    color: white;
-    font-display:inherit;
-}
-@media (min-width: 600px) {
-    .navbar .menu {
-        display: flex;
-        flex-direction: row;
-    }
-    .navbar .toggle {
-        display: none;
-    }
-    
-}
-.search-form input {
-  display: fixed;;
-  padding: 10px;
-  padding-right: 10%;
-  align-items: right;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-}
-
-main {
-  float: left;
-  width: 60%; /* The width is 60%, by default */
-  width: 100%;
-}
-h1 {
-  font-size: 2em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  color: black;
-  font-family:"Times New Roman", Times, serif;
-}
-h2 {
-  font-size: 1.5em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  color: black;
-  font-family:"Times New Roman", Times, serif;
-}
-h3 {
-  font-size: 1.2em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  color: black;
-  font-family:"Times New Roman", Times, serif;
-}
-h4 {
-  font-size: 1em;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-align: center;
-  color: black;
-  font-family:"Times New Roman", Times, serif;
-}
-
-/* Section */
-section
-{
- align-items: right;
- background-color: rgb(239, 238, 238);
- width: 100%;
- font-size: larger;
- text-align: left;
- padding: 1em 0;
-}
-.img{
-  align-items: center;
-  padding: 0;
-  width: 100%;
-  height: auto;
-  padding: 0px 10px 0px 10px;
-}
-ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margins */
-}
-li { float: left; 
-list-style-type: none;}
-
-/* Container holding the image and the text */
-.container {
-  position: relative;
-  text-align: center;
-  color: rgb(77, 47, 47);
-}
-
-.container img{
-max-width: 100%;
-transform-origin: center;
-transform: scale(var(--img-scale));
-transition: transform 0.4s ease-in-out;
-border-radius: 16px;
-}
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-/* carousel */
-.container {
-  padding: 2px 16px;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gelos Enterprises</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gelos Enterprises">
+    <meta name="keywords" content="Gelos Enterprises, professional quality business operations, digital transformation, artificial intelligence, machine learning, cloud services, software development, website applications, organisation software development">
+    <meta name="Marie Sumalee" content="Gelos Enterprises">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google fonts -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css5?family=Inconsolata:wght@500..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- end google fonts -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    <a href="https://www.flaticon.com/free-icons/icloud" title="icloud icons"></a>
+ <!-- Header -->
+ <header id="home">
+    <div class="nav w3-display-top-center">
+        <div class="navbar">
+          <div class="logo " id="logo"></div>
+          <span class="toggle" onclick="toggleMenu()">☰</span>
+            <ul class="menu">  
+              <li><a href="#about">About</a></li>
+              <li><a href="#offering">Offering</a></li>
+              <li><a href="#values">Company Values</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+          <li>
+            <form class="search-form input" action="index.html" method="post">
+              <input type="search" placeholder="Search for">
+            </form>
+          </li>
+          </lu>
+      </div>
+        <script>
+          function toggleMenu() {
+              const menu = document.querySelector('.navbar .menu');
+              menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+          }
+        </script>
+</div>
+    </header>
+            <!-- Coding is Beautiful Projects-->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
+<!-- End of Header -->
+<!-- End of Nav bar -->
+<!-- About -->
+ <section class="text-center w3-center">
+<div class="w3-display-container responsive  wide col-sm-15 text-center">
+    <h1 class="flex-container-center text-center align w3-bar-item ">Welcome to Gelos Enterprises</h1>
+    <h2 style="background-color: rgb(151, 186, 219);"
+    class=" w3-animate-zoom w3-button w3-center w3-text-white"><em>Excellence through continuous innovation</em></h2>
+  </div>
+ </section>
+  <!-- Slideshow container -->
+  <section class="carousel" aria-label="Gallery">
+    <div class="carousel__viewport">
+      <div class="carousel__slide2 container carousel__slide container display">
+        <br><br>
+          <img class="w3-image" src="images/slide01.jpg" alt="Gelos Enterprises responsive" width="1500" height="400">
+          <div class="carousel__snapper container w3-display-section content wide w3-padding-right">
+            <h3 class="w3-text-white w3-gray w3-border-dark-grey">Improving operations through Gelos products & services</h3>
+                <p class="w3-text-black">Gelos is a global agency that delivers high-quality products to clients seeking to achieve organisational success through digital transformation. 
+                  Over the past ten years, we have served our clients to achieve digital transformation by focusing on customer-centricity and data-driven insights; 
+                  </p>
+                      <div><a class="w3-button w3-black w3-text-white w3-padding-right" href="#about">Read more</a></div>       
+          <a href="#carousel__slide1"
+             class="carousel__prev">Go to last slide</a>
+          <a href="#carousel__slide2"
+             class="carousel__next">Go to next slide</a>
+        </div>
+     </div>
+   
+      <div class="carousel__slide2 container carousel__slide container display">
+        <br><br>
+        <img class="w3-image" src="images/silde02.jpg" alt="Gelos Enterprises responsive" width="1500" height="400">
+          <div class="carousel__snapper container w3-display-section content wide w3-padding-right">
+            <h3 class="w3-text-white w3-gray w3-border-dark-grey">Solving business promlems</h3>
+            <p class="w3-text-black w3-display-container">At Gelos, we provide cutting-edge technologies, helping our customers improve how 
+              they interact with digital solutions and seek new ways to change how they do business. 
+              We provide many services that allow you to take advantage of new technologyWe provide many services that allow you to take advantage of new technology 
+              and innovation to help solve your business problems.</p>
+              <div><a class="w3-button w3-black w3-text-white w3-padding-right" href="#offering">Know more</a></div>
+        <a href="#carousel__slide2"
+           class="carousel__prev">Go to previous slide</a>
+            </div>
+          </div>
+    </div>
   
-}
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
-}
+  </section>
+<!-- End of About -->
+<!--Artificles -->
+  <!-- Grid -->
+   <section class=" w3-container w3-center">
+<div class="w3-row-padding" id="about">
+    <div class="w3-center w3-padding-64">
+        <h3 class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">About Us</h3>
+        <p>
+        From its origins in Australia, Gelos Enterprises (Gelos) has grown into one of the world’s leading business operations. We are one of Australia’s largest listed companies, with our headquarters based in the Tulitza CBD. Our primary objective is to achieve excellence through continuous innovation
+        We aim to achieve this by:
+        <br>
+        <br>
+        increasing the success of organisations with existing products and technologies crafting a detailed proposition, we can propel a new business model and create a lasting
+        <br>
+        <br>
+        competitive advantage increasing our primary revenue streams through property ownership and investment being a trusted global investing partner that offers core incentives, business start-up and premium consulting services acting with integrity and honesty in all of our dealings.
+        <br>
+        <br>
+        We are a global business front runner.
+        <br>
+        <br>
+        We have high standards and pay attention to all levels of detail, providing us with successes over the years in our quest to meet the lofty expectations of businesses.</p>
+    </div>
+</div></section>
 
-@keyframes tostart {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: -300%;
-  }
-  98% {
-    left: -300%;
-  }
-  99% {
-    left: 0;
-  }
-}
+<!-- Values -->
+<section class="container">
+  <div class="w3-row-padding accordion" id="values">
+    <div class="w3-center w3-padding-64">
+      <h3 class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Company Values</h3>
+      <br>
+        <p>
+          These values guide us in all that we do and are the bedrock upon which we deliver consistently high calibre services.</p>
+      </div>
+    </div>
+      </section>
+    
+      <section class="articles">
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img src="images/intergrity.jpg" alt="integrity">
+            </figure>
+            <div class="article-body">
+              <h2 class="w3-xlarge w3-border-dark-grey"><em>Integrity</em></h2>
+              <p>Integrity creates trust. It is our most valued asset, as an organisation. Individually, 
+                it’s the constant choice to infuse every action with honesty, fairness, 
+                and respect for clients and colleagues alike.</p>
+            </div>
+          </div>
+        </article>
 
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
+<article>
+<div class="article-wrapper">
+ <figure>
+          <img src="images/sustainability.jpg" alt="sustainability">
+        </figure>
+        <div class="article-body">
+          <h2 class="w3-xlarge w3-border-dark-grey"><em>Investing in the future through sustainability</em></h2>
+          <p>We place huge value on social, economic and environmental sustainability work practices. Our businesses processes are designed to use all resources efficiently and responsibly, protect the social wellbeing of our communities and preserve 
+            the earth’s natural resources, both for today and future generations.</p>
+            </div>
+          </div>
+        </article>
 
+        <article>
+          <div class="article-wrapper">
+            <figure>
+              <img  src="images/diversity.jpg" alt="diversity">
+                   </figure>
+                   <div class="article-body">
+                    <h2 class="w3-xlarge w3-border-dark-grey"><em>Strength from diversity</em></h2>
+          <p>We embrace differences and adapt work practices to create an inclusive environment in which diverse skills, perspectives and backgrounds are valued. Diverse skills give us a competitive edge to easily design unique products, services and packages that fit the needs of our clients. 
+          A diverse mindset and team provide a larger pool of experiences, ideas and education with which to problem solve, create new products and devise new services.</p></div>
+        </div>
+      </div>
+    </article>
 
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
-
-.carousel {
-  position: relative;
-  padding-top: 75%;
-  filter: drop-shadow(0 0 10px #0003);
-  perspective: 100px;
-}
-
-.carousel__viewport {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  overflow-x: scroll;
-  counter-reset: item;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel__slide {
-  position: relative;
-  flex: 0 0 100%;
-  width: 80%;
-  background: #d1ebe5;
- counter-increment: item;
-}
-
-.carousel__slide:nth-child(even) {
-  background-color: #d1ebe5;
-}
-
-.carousel__snapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: center;
-}
-
-@media (hover: hover) {
-  .carousel__snapper {
-    animation-name: tonext, snap;
-    animation-timing-function: ease;
-    animation-duration: 5s;
-    animation-iteration-count: inherit;
-  }
-
-  .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
-    animation-name: none;
-  }
-}
-
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-
-.carousel__navigation {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
-}
-
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
-
-.carousel::before,
-.carousel::after,
-.carousel__prev,
-.carousel__next {
-  position: absolute;
-  top: 0;
-  margin-top: 37.5%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  font-size: 0;
-  outline: 0;
-}
+     <article>
+          <div class="article-wrapper">
+            <figure>
+      <img src="images/collaboration.jpg" alt="collaboration">
+</figure>
+<div class="article-body">
+<h2 class="w3-xlarge w3-border-dark-grey"><em>Success through collaboration</em></h2>
+    <p>We strive to do the right thing for the
+      client. We see ourselves as part of the
+      client’s team, and we’re dedicated to help
+      them succeed. For every venture, we
+      align our strategy with the client’s goals,
+      needs, and budget. We know that the
+      best way for our customers to succeed is
+      to work in partnership with them – rather
+      than for our customers.</p>
+    </div>
+</div>
+</article>
 
 
-/* article */
-article {
-  --img-scale: 1.001;
-  --title-color: black;
-  --link-icon-translate: -20px;
-  --link-icon-opacity: 0;
-  position: relative;
-  border-radius: 16px;
-  box-shadow: none;
-  background: #b7d4da;
-  transform-origin: center;
-  transition: all 0.4s ease-in-out;
-  overflow: hidden;
-}
-
-article a::after {
-  position: absolute;
-  inset-block: 0;
-  inset-inline: 0;
-  cursor: pointer;
-  content: "";
-}
-
-/* basic article elements styling */
-article h2 {
-  margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
-  font-size: 1.9rem;
-  letter-spacing: 0.06em;
-  color: var(--title-color);
-  transition: color 0.3s ease-out;
-}
-
-figure {
-  margin: 16px;
-  padding: 15px;
-  aspect-ratio: 15/8;
-  overflow: hidden;
-}
-
-article img {
-  max-width: 100%;
-  transform-origin: center;
-  transform: scale(var(--img-scale));
-  transition: transform 0.4s ease-in-out;
-  border-radius: 16%;
-}
-
-.article-body {
-  padding: 24px;
-}
-
-article a {
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  color: #28666e;
-}
-
-article a:focus {
-  outline: 1px dotted #28666e;
-}
-
-article a .icon {
-  min-width: 24px;
-  width: 24px;
-  height: 24px;
-  margin-left: 5px;
-  transform: translateX(var(--link-icon-translate));
-  opacity: var(--link-icon-opacity);
-  transition: all 0.3s;
-}
-
-/* using the has() relational pseudo selector to update our custom properties */
-article:has(:hover, :focus) {
-  --img-scale: 1.1;
-  --title-color: #28666e;
-  --link-icon-translate: 0;
-  --link-icon-opacity: 1;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
+<article>
+          <div class="article-wrapper">
+            <figure>
+<img src="images/innovative.jpg" alt="innovative">
+</figure>
+<div class="article-body">
+  <h2 class="w3-xlarge w3-border-dark-grey"><em>Innovative spirit</em></h2>
+<p>Innovation motivates action: to take risks,
+encourage curiosity and new ideas, learn
+from mistakes, and constantly strive to
+exceed expectations. Through innovation,
+we generate solutions for our customers
+and raise the bar — both within our
+workplace and throughout our industry.</p>
+</div>
+</div>
+</article>
+</section>
 
 
-/************************ 
-Generic layout styles
-**************************/
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-.articles {
-  display: grid;
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
-}
 
 
-@media only screen and (max-width: 1200px) {
-  article {
-    container: card/inline-size;
-  }
-  .article-body p {
-    display: 10px;
-  }
-  .logo {
-    display: smaller;
-  }
-}
-/* Use a media query to add a breakpoint at 600px: */
-@media only screen and (max-width: 600px) {
-  body {
-    background-color: rgb(171, 182, 192);
-    h1{ font-size: medium;}
-    h2{ font-size: medium;}
-    h3{ font-size: medium;}
-    h4{ font-size: medium;}
-    p{ font-size: medium;}
- .nav, .menu {
-  display: smaller;
-  justify-content: left;
-  align-items: left;
-  font-size: smaller;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin: 0;
-  background-color: #5c6275;
-  color: white;
-}
-        .logo {
-          display: smaller;
-        }
-         
-  }
-}
-p { 
-    margin: 1em ; 
-    text-align: center; 
-    color: black;
-  font-size: 1em;
-    font-family:"Times New Roman", Times, serif;
-    font-weight: 700;
-  letter-spacing: 1px;
-  }
+  <!-- Offering -->
+  <section class="container-grid" id="offering">
+    <br>
+    <h1 class="w3-xlarge w3-bottombar w3-border-dark-grey">Offering</h1>
+    </section>
  
+    <section class="container-grid w3-row-padding"> 
+      <div class="container-grid">
+        <h2><img src="images/app-development.png" alt="text " class="center" width="65" height="65"><br>Digital Transformation</h2>
+      </div>
+      <div class="card container-grid">
+          <p>To help our clients leverage the state-of-art technologies, we provide a tailored approach to enable change in the digital space. Our prior works include developing mobile applications, website applications, 
+            and organisation software development, among other digital capabilities. To know more, contact us.</p>
+          </div>
+</section>
+<section class="container-grid w3-row-padding"> 
+<div class="container-grid">
+        <h3 class="accordion w3-border-dark-grey  w3-display-container"><img src="images/cloud.png" alt="text " class="center" width="65" height="65"><br>Cloud Services</h3>
+          <p>Our Cloud programs include a range of services from full application development platforms to servers, storage, and virtual desktops. We offer the following:
+            <br>
+            <span>1.	Software as a service (SaaS)</span>
+            <br>
+            <span>2.	Platform as a service (PaaS)</span>
+            <br>
+            <span>3.	Infrastructure as a service (IaaS).</span>
+            </p>
+          </div>
+          </section>
+          <section class="container-grid w3-row-padding"> 
+          <div class="container-grid">
+        <h3 class="accordion w3-border-dark-grey  w3-display-container"><img src="images/ai.png" alt="text " class="center" width="65" height="65"><br>Artificial Intelligence</h3>
+          <p>Artificial intelligence services at Gelos can help you drive smart evolution of your workflows, technology and the entire organisation. Our industry experts help you implement a data-first strategy, augment with third-party sources, 
+            and operationalise and accelerate AI integration across your enterprise to generate positive business growth.</p>
+          </div> 
+  </section>
+   
+<!-- End of Grid -->
 
+     <!-- Contact  -->
+     <section class="container" id="contact">
+      <h3>Got questions? Get in touch!</h3>
+    <footer id="contact-container">
+    <div class="form w3-display grid container">
+    <!-- Form  -->
+      <form action="#" method="post" id="contactForm" class="contactForm">
+        <div>
+          <label for="fullName">Your Name:</label>
+          <input type="text" name="fullName" id="fullName" required>
+        </div>
 
-/* Add some padding inside the card container */
-.flex-container {
-  padding: 2px 16px;
-  flex-wrap:wrap;
-text-align: left;
-  align-items: center;
-}
+        <div>
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" id="phone" maxlength="12" placeholder="111-222-3333" required>
+        </div>
 
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required>
+        </div>
 
-@container card (min-width: 380px) {
-  .article-wrapper {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    gap: 16px;
-  }
-  .article-body {
-    padding-left: 0px;
-  }
-  figure {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  figure img {
-    height: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-  }
-}
+        <div class="radioBtns">
+          <p class="w3-text-green">Preferred method of contact:</p>
+          <label for="contactEmail">
+            <input type="radio" name="contact" id="contactEmail" value="email">
+            <span></span>
+            Email
+          </label>
 
-.sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap; 
-  width: 1px;
-}
+          <label for="contactTel">
+            <input type="radio" name="contact" id="contactTel" value="phone">
+            <span></span>
+            Phone
+          </label>
 
-/* Container holding the image and the text */
+          <label for="contactText">
+            <input type="radio" name="contact" id="contactText" value="text">
+            <span></span>
+            Text
+          </label>
+        </div>
 
-.container-grid {
-  background-color: rgba(236, 238, 235, 0.841);
-  padding: 10px;
-}
+        <div>
+          <label for="msg">Your Message / Question:</label>
+          <textarea name="msg" id="msg"></textarea>
+        </div>
 
-.container-grid  > div {
-  background-color: #cbe3f2;
-  color: #000;
-  padding: 10px;
-  font-size: 15px;
-  text-align: center;
-}
-/* Footer a */
-footer {
-  margin-top: 1rem;
-  margin-bottom: auto;
-  padding-left: 0.0px;
-  background-color: #d9dadcbb;
-  color: rgb(242, 242, 242);
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  text-align: center;
-}
+        <div class="checks">
+          <input type="checkbox" name="newsletter" id="newsletter" checked>
+          <span></span>
+          <label for="newsletter">Get in contact!</label>
+        </div>
 
-/* Social */
-.social, .contactInfo {
-  color: #342f2f;
-  background-color: #dedfe1;
-  padding:0;
-  text-align: center;
-}
-  /* Contact form */
-.form {
-  display: inline-block;
-  color: #3c3535;
-  padding: 1rem 1rem 2rem;
-}
-
-.form p {
-  font-weight: 300;
-  padding-bottom: 0rem;
-  color: #fbfbfb;
-}
-
-
-
-@media screen and (max-width: 1000px) {
-  footer {
-    background-color: beige;
-      display: block;
-    }
-    
-    footer .form {
-      display: block;
-      align-items: center;
-    }
-    footer .social {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      text-align: center;
-    }
+        <button type="submit" value="Send Message" form="contactForm"><i class="fas fa-fish"></i> Send Request </button>
+      </form>
+    </div>
   
-  }
 
+    <!-- Social Media -->
+    <section class="social w3-display grid container">
+        <h3 class="w3-text-black">Let's be social - connect with us!</h3>
+        <div class="w3-xlarge w3-section text-center w3-text-green">
+          <i class="fa fa-facebook-official w3-hover-opacity"></i>
+          <i class="fa fa-instagram w3-hover-opacity"></i>
+          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+          <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <div class="w3-center w3-padding-64">
+          <h3>Contact Information</h3>
+       <p> 111 Business Avenue
+        <br>
+        TULITZA NSW 9460
+      <br>p: 02 0000 0000
+    <br>e:contactus@gelosmail.com.au</p>
+    </div>
+    </section>
+</footer>
+
+  <!-- Footer -->
+</section>
+    <!-- Contact Info -->
+        <div class="article-body">
+          <h2 class="w3-text-dark-grey w3-center"><em>Improving operations through Gelos products & services</em></h2>
+        <p><a class="w3-button w3-center" href="#offering">Find out more</a></p>
+        </div>
+        <p class="text-center text-muted">
+          Copyright &copy;
+          <!-- This script automatically adds the current year to your website footer-->
+          <!-- (credit: https://updateyourfooter.com/)-->
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          - Gelos Enterprises
+        </p>
+    <!-- FAQs -->
+    <div class="fags">
+      <p>
+        <a title="FAQs" href="faqs.html">FAQs</a>
+      </p>
+      <p><a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a></p>
+      </div>
+
+  <!-- End page content -->
+  </body>
+  </html>
