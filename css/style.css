@@ -18,7 +18,7 @@ color: rgb(44, 42, 42);
   width: 100%;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
 font-size: 14px;  
-background-color:rgb(244, 245, 247);
+background-color: rgb(171, 182, 192);
 letter-spacing: 2px;font-weight: 300; 
 margin: 0; 
 padding: 0;
@@ -48,7 +48,7 @@ align-items: center;
   background: url(../images/logo.svg) no-repeat left;
   background-size: contain;
 }
- 
+
 button {
   background-color: #9fa2b2;
   color: white;
@@ -424,7 +424,7 @@ article {
   position: relative;
   border-radius: 16px;
   box-shadow: none;
-  background: #d6e8e4;
+  background: #b7d4da;
   transform-origin: center;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
@@ -613,12 +613,12 @@ text-align: left;
 /* Container holding the image and the text */
 
 .container-grid {
-  background-color: rgba(200, 213, 194, 0.841);
+  background-color: rgba(236, 238, 235, 0.841);
   padding: 10px;
 }
 
 .container-grid  > div {
-  background-color: #b6d7a9;
+  background-color: #cbe3f2;
   color: #000;
   padding: 10px;
   font-size: 15px;
@@ -649,7 +649,6 @@ footer {
   /* Contact form */
 .form {
   display: inline-block;
-  background-color:  rgb(204, 202, 199);
   color: #3c3535;
   padding: 1rem 1rem 2rem;
 }
