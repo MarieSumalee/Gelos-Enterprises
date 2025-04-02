@@ -9,6 +9,13 @@ header {
   position: relative;
   background-size: cover; /* Scales the image proportionally to cover the area */
   background-position: center; 
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
 /* Body */
@@ -49,30 +56,25 @@ align-items: center;
   background-size: contain;
 }
 
-button {
-  background-color: #9fa2b2;
-  color: white;
-  padding: 10px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 5px;
-}
 /* Default styling for smaller screens */
 .navbar {
-    display: flex;
-    text-align: center;
-    background-color: #5c6275;
+    display: inline-flexbox;
+    height: auto;
+    text-align: left;
+    background-color: #4245518d;
+    width: 100%;
     font-family:Arial, Helvetica, sans-serif;
     font-size: medium;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    align-items: left;
+    padding: 0px;
+    padding-left: 0px;
+    position: relative;
 }
+
 .navbar a {
-  display: inline-flex;
-  align-content: flex-start;
+    display: inline-flex;
+    align-content: flex-start;
     color: rgb(255, 255, 255);
     row-gap: 20px;
     padding-top: 15%;
@@ -83,7 +85,7 @@ button {
     text-align: center;
 }
 .navbar a:hover {
-    background-color: #ac9a8e;
+    background-color: #c59574;
     color: black;
 }
 .navbar .menu {

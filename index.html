@@ -17,11 +17,11 @@
     <a href="https://www.flaticon.com/free-icons/icloud" title="icloud icons"></a>
  <!-- Header -->
  <header id="home">
-    <div class="nav w3-display-top-center">
-        <div class="navbar">
-          <div class="logo " id="logo"></div>
+    <div class=" navbar wide col-sm-15 text-center">
+      <div class="logo " id="logo"></div>
           <span class="toggle" onclick="toggleMenu()">☰</span>
-            <ul class="menu">  
+            <ul class="menu navbar">  
+              <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#offering">Offering</a></li>
               <li><a href="#values">Company Values</a></li>
@@ -32,6 +32,7 @@
             </form>
           </li>
           </lu>
+          
       </div>
         <script>
           function toggleMenu() {
@@ -39,13 +40,11 @@
               menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
           }
         </script>
-</div>
+        
     </header>
             <!-- Coding is Beautiful Projects-->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.0/processing.min.js"></script>
 <!-- End of Header -->
 <!-- End of Nav bar -->
-    
 <!-- About -->
  <section class="text-center w3-center">
 <div class="w3-display-container responsive  wide col-sm-15 text-center">
@@ -93,7 +92,7 @@
 <!-- End of About -->
 <!--Artificles -->
   <!-- Grid -->
-   <section class=" w3-container w3-center">
+   <section class="w3-container w3-center">
 <div class="w3-row-padding" id="about">
     <div class="w3-center w3-padding-64">
         <h3 class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">About Us</h3>
@@ -228,7 +227,7 @@ workplace and throughout our industry.</p>
 </section>
 <section class="container-grid w3-row-padding"> 
 <div class="container-grid">
-        <h3 class="accordion w3-border-dark-grey  w3-display-container"><img src="images/cloud.png" alt="text " class="center" width="65" height="65"><br>Cloud Services</h3>
+        <h2 class="accordion w3-border-dark-grey  w3-display-container"><img src="images/cloud.png" alt="text " class="center" width="65" height="65"><br>Cloud Services</h2>
           <p>Our Cloud programs include a range of services from full application development platforms to servers, storage, and virtual desktops. We offer the following:
             <br>
             <span>1.	Software as a service (SaaS)</span>
@@ -241,7 +240,7 @@ workplace and throughout our industry.</p>
           </section>
           <section class="container-grid w3-row-padding"> 
           <div class="container-grid">
-        <h3 class="accordion w3-border-dark-grey  w3-display-container"><img src="images/ai.png" alt="text " class="center" width="65" height="65"><br>Artificial Intelligence</h3>
+        <h2 class="accordion w3-border-dark-grey  w3-display-container"><img src="images/ai.png" alt="text " class="center" width="65" height="65"><br>Artificial Intelligence</h2>
           <p>Artificial intelligence services at Gelos can help you drive smart evolution of your workflows, technology and the entire organisation. Our industry experts help you implement a data-first strategy, augment with third-party sources, 
             and operationalise and accelerate AI integration across your enterprise to generate positive business growth.</p>
           </div> 
@@ -251,7 +250,7 @@ workplace and throughout our industry.</p>
 
      <!-- Contact  -->
      <section class="container" id="contact">
-      <h3>Got questions? Get in touch!</h3>
+      <h2 class="w3-text-orange">Got questions? Get in touch!</h2>
     <footer id="contact-container">
     <div class="form w3-display grid container">
     <!-- Form  -->
