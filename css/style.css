@@ -61,13 +61,12 @@ align-items: center;
     display: inline-flexbox;
     height: auto;
     text-align: left;
-    background-color: #4245518d;
     width: 100%;
     font-family:Arial, Helvetica, sans-serif;
     font-size: medium;
     justify-content: space-between;
     align-items: left;
-    padding: 0px;
+    padding: 3px;
     padding-left: 0px;
     position: relative;
 }
@@ -91,6 +90,7 @@ align-items: center;
 .navbar .menu {
     display: none;
     flex-direction: column;
+    background-color: #5c6275;
 }
 .navbar .menu a {
     padding: 10px;
@@ -681,4 +681,3 @@ footer {
     }
   
   }
-
